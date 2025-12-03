@@ -38,7 +38,7 @@ export default function FaqsCardsIcons01() {
         <div className="my-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ icon: Icon, title, desc }, key) => (
             <Card key={key}>
-              <CardHeader className="border-b gap-0">
+              <CardHeader className="gap-0 border-b">
                 <div className="bg-primary mb-6 grid h-12 w-12 place-items-center rounded-lg">
                   <Icon className="text-primary-foreground h-6 w-6" />
                 </div>

@@ -553,5 +553,25 @@
     "name": "ai-video-generator-01",
     "description": "AI video generation agent with preview",
     "categories": ["ai-agents"]
+  },
+  {
+    "name": "job-status-card-01",
+    "description": "Job status card with location tracking and price range",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "goal-progress-card-01",
+    "description": "Goal progress card with animated progress bar and status",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "onboarding-progress-card-01",
+    "description": "Onboarding checklist card with segmented progress meter",
+    "categories": ["cruds"]
+  },
+  {
+    "name": "neon-calendar-01",
+    "description": "Neon-styled calendar with event dots and date selection",
+    "categories": ["cruds"]
   }
 ]

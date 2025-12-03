@@ -90,7 +90,7 @@ export function DocsSidebar({
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {BLOCKS_SECTIONS.map(({ name, href }) => {  
+              {BLOCKS_SECTIONS.map(({ name, href }) => {
                 return (
                   <SidebarMenuItem key={name}>
                     <SidebarMenuButton

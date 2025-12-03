@@ -196,10 +196,7 @@ export function fixImport(content: string, pathMappings: Map<string, string>) {
   })
 
   // Fix UI component imports
-  content = content.replaceAll(
-    "@/components/ui/",
-    "@/components/ui/"
-  )
+  content = content.replaceAll("@/components/ui/", "@/components/ui/")
 
   // Fix example imports
   content = content.replaceAll(

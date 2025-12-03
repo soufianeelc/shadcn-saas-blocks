@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "job-status-card-01",
+  "type": "registry:block",
+  "description": "Job status card with location tracking and price range",
+  "registryDependencies": [
+    "badge",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "creative-tim/blocks/job-status-card-01/page.tsx",
+      "content": "import { Clock } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\nimport { Card } from \"@/components/ui/card\"\n\nexport default function JobStatusCard() {\n  return (\n    <Card className=\"relative max-w-2xl rounded-2xl p-6 shadow-lg\">\n      <div className=\"flex flex-col gap-4\">\n        <div className=\"flex items-start justify-between\">\n          <Badge className=\"rounded-full bg-orange-500 px-2 py-1 text-sm text-white dark:bg-orange-600\">\n            <span className=\"mr-1.5 size-4 rounded-full bg-white dark:bg-gray-900\"></span>\n            In Progress\n          </Badge>\n          <span className=\"text-muted-foreground text-[13px]\">#YQZNFA</span>\n        </div>\n\n        <div className=\"flex flex-col gap-4\">\n          <div className=\"flex items-baseline gap-2\">\n            <h3 className=\"text-foreground text-[40px] leading-none font-light tracking-tighter\">\n              $200-250\n            </h3>\n          </div>\n\n          <div className=\"flex items-center gap-2\">\n            <span className=\"text-base text-emerald-500 dark:text-emerald-400\">\n              +14%\n            </span>\n            <span className=\"text-base text-emerald-500 dark:text-emerald-400\">\n              +$25,26\n            </span>\n          </div>\n\n          <div className=\"relative flex flex-col gap-1\">\n            <div className=\"absolute top-[24px] bottom-[24px] left-[7px] w-2 border-l-2 border-dashed border-orange-200 dark:border-orange-800\" />\n\n            <div className=\"relative z-10 flex items-start gap-3\">\n              <div className=\"mt-0.5\">\n                <div className=\"h-4 w-4 rounded-full bg-orange-500 dark:bg-orange-600\" />\n              </div>\n              <p className=\"text-foreground flex-1 text-[15px] leading-snug\">\n                1248 N Highland Ave, Los Angeles, CA 90038\n              </p>\n            </div>\n\n            <div className=\"relative z-10 mt-1 flex items-start gap-3\">\n              <div className=\"mt-0.5\">\n                <div className=\"h-4 w-4 rounded-full border-2 border-orange-200 bg-white dark:border-orange-800 dark:bg-gray-950\" />\n              </div>\n              <p className=\"text-muted-foreground flex-1 text-[15px] leading-snug\">\n                2530 W 8th St, Los Angeles, CA 90057\n              </p>\n            </div>\n          </div>\n\n          <div className=\"mt-3 flex items-center justify-between\">\n            <span className=\"text-sm text-gray-400 dark:text-gray-500\">\n              Oct 2, 2025\n            </span>\n            <div className=\"flex items-center gap-1.5 text-gray-400 dark:text-gray-500\">\n              <Clock className=\"h-3.5 w-3.5\" />\n              <span className=\"text-sm\">00:43:52</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </Card>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/job-status-card/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "600px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component",
+    "details": "Job or delivery status tracking card with price range, growth indicators, location timeline with visual connector, and duration tracking. Features status badge, job ID, pickup/dropoff locations with custom icons, and real-time timer. Built with shadcn/ui Badge and Card components. Perfect for delivery apps, logistics dashboards, gig economy platforms, and service tracking interfaces."
+  },
+  "categories": [
+    "cruds"
+  ]
+}

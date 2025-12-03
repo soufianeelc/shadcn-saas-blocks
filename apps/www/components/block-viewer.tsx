@@ -24,8 +24,6 @@ import { trackEvent } from "@/lib/events"
 import { createFileTreeForRegistryItemFiles, FileTree } from "@/lib/registry"
 import { cn } from "@/lib/utils"
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
-import { getIconForLanguageExtension } from "@/components/icons"
-import { OpenInV0Button } from "@/components/open-in-v0-button"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -51,10 +49,9 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/components/ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { getIconForLanguageExtension } from "@/components/icons"
+import { OpenInV0Button } from "@/components/open-in-v0-button"
 
 type BlockViewerContext = {
   item: z.infer<typeof registryItemSchema>
@@ -145,12 +142,12 @@ function BlockViewerToolbar() {
               href={`#${item.name}`}
               className="underline-offset-2 hover:underline"
             >
-            {item.description?.replace(/\.$/, "")}
-          </a>
-        </h2>
-      </div>
+              {item.description?.replace(/\.$/, "")}
+            </a>
+          </h2>
+        </div>
         {item.meta?.details && (
-          <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+          <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">
             {item.meta.details}
           </p>
         )}
@@ -158,7 +155,7 @@ function BlockViewerToolbar() {
 
       {/* Controllers Section */}
       <div className="flex w-full items-center gap-2">
-          {/* {isPro && !hasAccess ? (
+        {/* {isPro && !hasAccess ? (
               <Button
                 variant="outline"
                 className="w-fit cursor-not-allowed gap-1 px-2 opacity-50 shadow-none"
@@ -172,25 +169,19 @@ function BlockViewerToolbar() {
                 </span>
               </Button>
             ) : ( */}
-              <Button
-                variant="outline"
-                className="w-fit gap-1 px-2 shadow-none"
-                size="sm"
-                onClick={() => {
-                  copyToClipboard(
-                    `npx @creative-tim/ui@latest add ${item.name}`
-                  )
-                }}
-              >
-                {isCopied ? <Check /> : <Terminal />}
-                <span>
-                  npx @creative-tim/ui@latest add {item.name}
-                </span>
-              </Button>
-            {/* )} */}
-            
-        
-        
+        <Button
+          variant="outline"
+          className="w-fit gap-1 px-2 shadow-none"
+          size="sm"
+          onClick={() => {
+            copyToClipboard(`npx @creative-tim/ui@latest add ${item.name}`)
+          }}
+        >
+          {isCopied ? <Check /> : <Terminal />}
+          <span>npx @creative-tim/ui@latest add {item.name}</span>
+        </Button>
+        {/* )} */}
+
         <div className="ml-auto flex items-center gap-2">
           <div className="h-8 items-center gap-1.5 rounded-md border p-1 shadow-none">
             <ToggleGroup
@@ -251,12 +242,10 @@ function BlockViewerToolbar() {
             <TabsList className="grid h-8 grid-cols-2 items-center rounded-md p-1 *:data-[slot=tabs-trigger]:h-6 *:data-[slot=tabs-trigger]:rounded-sm *:data-[slot=tabs-trigger]:px-2 *:data-[slot=tabs-trigger]:text-xs">
               <TabsTrigger value="preview">Preview</TabsTrigger>
               {/* <TabsTrigger value="code" disabled={isPro && !hasAccess}> */}
-              <TabsTrigger value="code">
-                Code
-              </TabsTrigger>
+              <TabsTrigger value="code">Code</TabsTrigger>
             </TabsList>
           </Tabs>
-         
+
           <Separator orientation="vertical" className="mx-1 !h-4" />
           <OpenInV0Button name={item.name} />
         </div>

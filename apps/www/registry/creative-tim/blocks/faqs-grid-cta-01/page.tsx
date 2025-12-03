@@ -45,7 +45,7 @@ export default function FaqsGridCta01() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ title, desc }, key) => (
             <Card key={key}>
-              <CardHeader className="border-b px-6 gap-0">
+              <CardHeader className="gap-0 border-b px-6">
                 <h3 className="text-lg font-semibold">{title}</h3>
               </CardHeader>
               <CardContent className="px-6">

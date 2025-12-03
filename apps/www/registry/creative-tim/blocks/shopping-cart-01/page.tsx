@@ -60,11 +60,10 @@ export default function ShoppingCart01() {
             </div>
           </CardHeader>
           <CardContent>
-
             <div className="grid w-full grid-cols-1 gap-8 lg:grid-cols-3">
               <div className="col-span-2">
                 <Card className="border-2">
-                  <CardHeader className="px-6 gap-0 border-b">
+                  <CardHeader className="gap-0 border-b px-6">
                     <div className="flex items-center gap-2">
                       <Package className="text-primary h-5 w-5" />
                       <CardTitle className="text-xl">
@@ -157,7 +156,7 @@ export default function ShoppingCart01() {
               <div className="col-span-1">
                 <div className="sticky top-4">
                   <Card className="border-2">
-                    <CardHeader className="px-6 gap-0 border-b">
+                    <CardHeader className="gap-0 border-b px-6">
                       <CardTitle className="text-xl">Order Summary</CardTitle>
                     </CardHeader>
                     <CardContent className="p-0">

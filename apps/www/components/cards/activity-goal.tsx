@@ -13,10 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import {
-  ChartConfig,
-  ChartContainer,
-} from "@/components/ui/chart"
+import { ChartConfig, ChartContainer } from "@/components/ui/chart"
 
 const data = [
   {

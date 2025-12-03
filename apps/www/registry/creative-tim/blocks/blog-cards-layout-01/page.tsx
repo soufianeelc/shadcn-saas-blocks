@@ -18,7 +18,8 @@ const POSTS = [
   {
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop",
     tag: "Enterprise",
-    title: "Autodesk and Figma looks to future of 3D printing with Project Escher",
+    title:
+      "Autodesk and Figma looks to future of 3D printing with Project Escher",
     desc: "Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens bed design but the back is too high for the beams and angle of the ceiling.",
     date: "10 September 2022",
     author: {

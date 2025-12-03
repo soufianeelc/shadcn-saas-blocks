@@ -10,11 +10,11 @@ import { findNeighbour } from "fumadocs-core/server"
 
 import { source } from "@/lib/source"
 import { absoluteUrl } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { DocsCopyPage } from "@/components/docs-copy-page"
 import { DocsSidebarCta } from "@/components/docs-sidebar-cta"
 import { DocsTableOfContents } from "@/components/docs-toc"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 
 export const revalidate = false
 export const dynamic = "force-static"

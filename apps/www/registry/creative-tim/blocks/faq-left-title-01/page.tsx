@@ -36,7 +36,7 @@ export default function FaqLeftTitle01() {
         <div className="col-span-3 grid grid-cols-1 gap-6 md:grid-cols-2">
           {DATA.map(({ title, desc }, key) => (
             <Card key={key} className="border-none shadow-none">
-              <CardHeader className="px-6 gap-0 border-b">
+              <CardHeader className="gap-0 border-b px-6">
                 <h3 className="text-lg font-semibold">{title}</h3>
               </CardHeader>
               <CardContent className="px-6">

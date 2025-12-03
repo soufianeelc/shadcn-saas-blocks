@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 
+import { Button } from "@/components/ui/button"
 import { BlocksNav } from "@/components/blocks-nav"
 import {
   PageActions,
@@ -9,7 +10,6 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { PageNav } from "@/components/page-nav"
-import { Button } from "@/components/ui/button"
 
 const title = "Blocks"
 const description =

@@ -2,10 +2,6 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { ChartCopyButton } from "@/components/chart-copy-button"
-import { Chart } from "@/components/chart-display"
-import { getIconForLanguageExtension } from "@/components/icons"
-import { OpenInV0Button } from "@/components/open-in-v0-button"
 import { Button } from "@/components/ui/button"
 import {
   Drawer,
@@ -23,6 +19,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { ChartCopyButton } from "@/components/chart-copy-button"
+import { Chart } from "@/components/chart-display"
+import { getIconForLanguageExtension } from "@/components/icons"
+import { OpenInV0Button } from "@/components/open-in-v0-button"
 
 export function ChartCodeViewer({
   chart,

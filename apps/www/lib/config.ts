@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Creative Tim UI",
+  name: "SaaS UI Blocks",
   url: "https://creative-tim.com/ui",
   ogImage: "https://creative-tim.com/ui/og.jpg",
   description:
-    "A collection of Open Source agent and audio components that you can customize, extend, and build on.",
+    "Beautiful components, blocks, and UI elements designed to speed up your SaaS development.",
   links: {
     twitter: "https://x.com/creativetim",
     github: "https://github.com/creativetimofficial/ui",

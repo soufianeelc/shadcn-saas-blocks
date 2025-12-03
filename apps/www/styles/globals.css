@@ -100,6 +100,11 @@
   --code-number: oklch(0.56 0 0);
   --selection: oklch(0.145 0 0);
   --selection-foreground: oklch(1 0 0);
+
+  /* Neon Calendar */
+  --neon-accent: 152 84% 60%;
+  --neon-accent-dot: 152 86% 59%;
+  --neon-selected-text: 145 20% 5%;
 }
 
 .dark {
@@ -142,11 +147,16 @@
   --code-number: oklch(0.72 0 0);
   --selection: oklch(0.922 0 0);
   --selection-foreground: oklch(0.205 0 0);
+
+  /* Neon Calendar */
+  --neon-accent: 152 84% 60%;
+  --neon-accent-dot: 152 86% 59%;
+  --neon-selected-text: 145 20% 5%;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 font-light tracking-tight;
   }
   ::selection {
     @apply bg-selection text-selection-foreground;
@@ -441,5 +451,56 @@
     padding-block: 0.1rem;
     font-family: var(--font-mono);
     font-size: 0.8rem;
+  }
+
+  @keyframes progress-diagonal {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 8px 8px;
+    }
+  }
+
+  @keyframes ripple {
+    to {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes ripple-icon {
+    from {
+      width: 48px;
+      height: 48px;
+      opacity: 1;
+    }
+    to {
+      width: 120px;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes spectrum-animation {
+    0%,
+    100% {
+      height: 15%;
+    }
+    50% {
+      height: 100%;
+    }
+  }
+
+  @keyframes float-heart {
+    0% {
+      transform: translate(-50%, -50%) translateY(0) translateX(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(-120px) translateX(var(--heart-offset, 0px)) scale(1.5);
+      opacity: 0;
+    }
   }
 }

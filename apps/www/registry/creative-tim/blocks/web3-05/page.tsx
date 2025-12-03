@@ -9,7 +9,8 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 const DATA = [
   {
     tokenId: "#1",
-    profileImg: "https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400",
+    profileImg:
+      "https://images.unsplash.com/photo-1623853434105-8e7a72898180?auto=format&fit=crop&q=80&w=400&h=400",
     name: "Tina Andrew",
     desc: "Creator",
     imgs: [
@@ -20,7 +21,8 @@ const DATA = [
   },
   {
     tokenId: "#2",
-    profileImg: "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400",
+    profileImg:
+      "https://images.unsplash.com/photo-1716662318479-a9c0f1cd1a0e?auto=format&fit=crop&q=80&w=400&h=400",
     name: "Linde Michael",
     desc: "Creator",
     imgs: [
@@ -82,7 +84,7 @@ export default function Web305() {
         <CardContent className="grid grid-cols-1 gap-6 px-6 pt-0 pb-6 md:grid-cols-2 lg:grid-cols-3">
           {DATA.map(({ tokenId, profileImg, name, desc, imgs }, key) => (
             <Card key={key} className="flex flex-col justify-between py-4">
-              <CardHeader className="px-4 gap-0">
+              <CardHeader className="gap-0 px-4">
                 <p className="font-semibold">{tokenId}</p>
                 <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
                   <div className="flex items-start gap-3">

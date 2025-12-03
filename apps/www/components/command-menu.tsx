@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { useIsMac } from "@/hooks/use-is-mac"
 import { useMutationObserver } from "@/hooks/use-mutation-observer"
-import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { Button } from "@/components/ui/button"
 import {
   Command,
@@ -30,6 +29,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Separator } from "@/components/ui/separator"
+import { copyToClipboardWithMeta } from "@/components/copy-button"
 
 export function CommandMenu({
   tree,
@@ -134,7 +134,7 @@ export function CommandMenu({
         >
           <span className="hidden lg:inline-flex">Search doc...</span>
           <span className="inline-flex lg:hidden">Search...</span>
-          <div className="absolute top-1.5 right-1.5 hidden gap-1 sm:flex mt-[-1px]">
+          <div className="absolute top-1.5 right-1.5 mt-[-1px] hidden gap-1 sm:flex">
             <CommandMenuKbd>{isMac ? "⌘" : "Ctrl"}</CommandMenuKbd>
             <CommandMenuKbd className="aspect-square">K</CommandMenuKbd>
           </div>

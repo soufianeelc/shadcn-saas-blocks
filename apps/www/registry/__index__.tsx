@@ -2978,6 +2978,78 @@ export const Index: Record<string, any> = {
     categories: ["ai-agents"],
     meta: {"iframeHeight":"1100px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Advanced AI video generation interface with progress tracking and gallery view. Generate videos from text descriptions using leading AI providers like Runway, Pika, and OpenAI Sora. Features customizable duration, style selection, real-time progress indicators, video preview with playback controls, and generation history. Perfect for video content creation, marketing materials, and AI-powered media platforms."},
   },
+  "job-status-card-01": {
+    name: "job-status-card-01",
+    description: "Job status card with location tracking and price range",
+    type: "registry:block",
+    registryDependencies: ["badge","card"],
+    files: [{
+      path: "registry/creative-tim/blocks/job-status-card-01/page.tsx",
+      type: "registry:page",
+      target: "app/job-status-card/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim/blocks/job-status-card-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"600px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Job or delivery status tracking card with price range, growth indicators, location timeline with visual connector, and duration tracking. Features status badge, job ID, pickup/dropoff locations with custom icons, and real-time timer. Built with shadcn/ui Badge and Card components. Perfect for delivery apps, logistics dashboards, gig economy platforms, and service tracking interfaces."},
+  },
+  "goal-progress-card-01": {
+    name: "goal-progress-card-01",
+    description: "Goal progress card with animated progress bar and status",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim/blocks/goal-progress-card-01/page.tsx",
+      type: "registry:page",
+      target: "app/goal-progress-card/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim/blocks/goal-progress-card-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"400px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Goal progress tracking card with multi-segment animated progress bar showing completed, in-flight, and remaining work. Features gradient fills, animated diagonal stripes for in-progress tasks, circular thumb indicator, and dynamic status messaging. Built with shadcn/ui Card components with full dark mode support using CSS custom properties. Perfect for fitness apps, project management dashboards, goal tracking platforms, and any interface requiring visual progress indicators with detailed status feedback."},
+  },
+  "onboarding-progress-card-01": {
+    name: "onboarding-progress-card-01",
+    description: "Onboarding checklist card with segmented progress meter",
+    type: "registry:block",
+    registryDependencies: ["card"],
+    files: [{
+      path: "registry/creative-tim/blocks/onboarding-progress-card-01/page.tsx",
+      type: "registry:page",
+      target: "app/onboarding-progress-card/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim/blocks/onboarding-progress-card-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Onboarding progress card with segmented meter visualization showing completion status. Features gradient-filled progress bars, checklist items with icons, and elegant centered layout. Built with shadcn/ui Card components with full dark mode support. Perfect for onboarding flows, setup wizards, multi-step processes, and user activation dashboards requiring visual progress tracking."},
+  },
+  "neon-calendar-01": {
+    name: "neon-calendar-01",
+    description: "Neon-styled calendar with event dots and date selection",
+    type: "registry:block",
+    registryDependencies: ["card","button"],
+    files: [{
+      path: "registry/creative-tim/blocks/neon-calendar-01/page.tsx",
+      type: "registry:page",
+      target: "app/neon-calendar/page.tsx"
+    }],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/creative-tim/blocks/neon-calendar-01/page.tsx")
+      const exportName = Object.keys(mod).find(key => typeof mod[key] === 'function' || typeof mod[key] === 'object') || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: ["cruds"],
+    meta: {"iframeHeight":"700px","container":"w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0","mobile":"component","details":"Modern neon-styled calendar component with month navigation, date selection, event indicators, and selected date details panel. Features glowing accent colors, smooth hover states, event dots on specific dates, and today indicator ring. Built with shadcn/ui Card and Button components with custom neon CSS variables for consistent theming. Perfect for scheduling apps, event planners, booking systems, and any application requiring an elegant date selection interface with visual event markers."},
+  },
   "use-mobile": {
     name: "use-mobile",
     description: "",

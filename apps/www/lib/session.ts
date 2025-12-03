@@ -1,14 +1,14 @@
-let accessToken: string | null = null;
+let accessToken: string | null = null
 
 export function setAccessToken(token: string | null) {
-  accessToken = token;
+  accessToken = token
 }
 export function getAccessToken() {
-  return accessToken;
+  return accessToken
 }
 export function clearAccessToken() {
-  accessToken = null;
+  accessToken = null
 }
 export function getAuthHeaders(): HeadersInit {
-  return accessToken ? { Authorization: `Bearer ${accessToken}` } : {};
+  return accessToken ? { Authorization: `Bearer ${accessToken}` } : {}
 }

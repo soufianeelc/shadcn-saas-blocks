@@ -12,8 +12,8 @@ const nextConfig = {
 
   // Serve the app under /ui — set a base path and ensure assets are served from the same prefix.
   // You can override the asset prefix with NEXT_PUBLIC_ASSET_PREFIX if needed.
-  basePath: '/ui',
-  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '/ui',
+  basePath: "/ui",
+  assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || "/ui",
   images: {
     remotePatterns: [
       {
@@ -36,6 +36,12 @@ const nextConfig = {
   },
   redirects() {
     return [
+      {
+        source: "/",
+        destination: "/ui",
+        permanent: false,
+        basePath: false,
+      },
       {
         source: "/components",
         destination: "/docs/components",

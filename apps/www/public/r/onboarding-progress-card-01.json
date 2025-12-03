@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "onboarding-progress-card-01",
+  "type": "registry:block",
+  "description": "Onboarding checklist card with segmented progress meter",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "creative-tim/blocks/onboarding-progress-card-01/page.tsx",
+      "content": "import { Check, ChevronRight } from \"lucide-react\"\n\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\"\n\nexport default function OnboardingProgressCard() {\n  const totalBars = 40\n  const filledBars = 18\n\n  const gradientColors = [\n    \"#0D9488\", // teal-600\n    \"#14B8A6\", // teal-500\n    \"#2DD4BF\", // teal-400\n    \"#5EEAD4\", // teal-300\n    \"#99F6E4\", // teal-200\n  ]\n\n  const listItems = [\n    { id: \"workspace\", text: \"Create your workspace\", state: \"pending\" },\n    { id: \"profile\", text: \"Complete your profile\", state: \"pending\" },\n    { id: \"team\", text: \"Invite team members\", state: \"pending\" },\n  ]\n\n  return (\n    <Card\n      className=\"relative mx-auto max-w-xl rounded-3xl border px-4 py-6 shadow-2xl\"\n      role=\"group\"\n      aria-label=\"Onboarding checklist\"\n    >\n      <CardHeader className=\"space-y-2 pb-4 text-center\">\n        <div className=\"mx-auto mb-2 flex h-11 w-11 items-center justify-center\">\n          <svg\n            viewBox=\"0 0 42 42\"\n            fill=\"none\"\n            xmlns=\"http://www.w3.org/2000/svg\"\n            className=\"text-foreground\"\n          >\n            <path\n              d=\"M21 3L3 12v18l18 9 18-9V12L21 3z\"\n              stroke=\"currentColor\"\n              strokeWidth=\"2\"\n              strokeLinejoin=\"round\"\n              fill=\"none\"\n            />\n            <path\n              d=\"M21 21L12 16.5M21 21l9-4.5M21 21v9\"\n              stroke=\"currentColor\"\n              strokeWidth=\"2\"\n            />\n          </svg>\n        </div>\n\n        <CardTitle className=\"text-center text-2xl leading-tight font-light\">\n          Welcome to your workspace!\n        </CardTitle>\n\n        <CardDescription className=\"mx-auto max-w-lg text-center text-base leading-normal font-light\">\n          Let's get you set up. Complete these steps to unlock the full\n          experience.\n        </CardDescription>\n      </CardHeader>\n\n      <CardContent className=\"space-y-4\">\n        <div\n          className=\"flex items-end justify-center gap-1.5\"\n          role=\"meter\"\n          aria-valuenow={filledBars}\n          aria-valuemin={0}\n          aria-valuemax={totalBars}\n          aria-label=\"Onboarding progress\"\n        >\n          {Array.from({ length: totalBars }).map((_, i) => {\n            const isFilled = i < filledBars\n            const colorIndex = Math.floor(\n              (i / filledBars) * (gradientColors.length - 1)\n            )\n            const backgroundColor = isFilled\n              ? gradientColors[Math.min(colorIndex, gradientColors.length - 1)]\n              : undefined\n\n            return (\n              <div\n                key={i}\n                className=\"bg-muted h-10 w-2 rounded-md\"\n                style={\n                  isFilled\n                    ? {\n                        backgroundColor,\n                      }\n                    : undefined\n                }\n              />\n            )\n          })}\n        </div>\n\n        <div\n          className=\"bg-card/95 overflow-hidden rounded-2xl border backdrop-blur\"\n          role=\"list\"\n        >\n          {listItems.map((item, index) => (\n            <div\n              key={item.id}\n              className=\"flex h-16 items-center justify-between border-b px-4 last:border-b-0\"\n              role=\"listitem\"\n            >\n              <div className=\"flex items-center gap-3\">\n                <div className=\"bg-muted grid h-7 w-7 place-items-center rounded-full border\">\n                  <Check className=\"text-muted-foreground h-4 w-4\" />\n                </div>\n                <span className=\"text-lg font-medium\">{item.text}</span>\n              </div>\n              <ChevronRight className=\"text-muted-foreground h-4 w-4 shrink-0\" />\n            </div>\n          ))}\n        </div>\n      </CardContent>\n    </Card>\n  )\n}\n",
+      "type": "registry:page",
+      "target": "app/onboarding-progress-card/page.tsx"
+    }
+  ],
+  "meta": {
+    "iframeHeight": "700px",
+    "container": "w-full bg-surface min-h-svh flex px-4 py-12 items-center md:py-20 justify-center min-w-0",
+    "mobile": "component",
+    "details": "Onboarding progress card with segmented meter visualization showing completion status. Features gradient-filled progress bars, checklist items with icons, and elegant centered layout. Built with shadcn/ui Card components with full dark mode support. Perfect for onboarding flows, setup wizards, multi-step processes, and user activation dashboards requiring visual progress tracking."
+  },
+  "categories": [
+    "cruds"
+  ]
+}

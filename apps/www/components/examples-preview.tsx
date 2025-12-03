@@ -410,7 +410,7 @@ export function ExamplesPreview() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {category.examples.map((example) => {
               const CardContent = (
-                <Card className="bg-card overflow-hidden border transition-all hover:shadow-md py-0 gap-4">
+                <Card className="bg-card gap-4 overflow-hidden border py-0 transition-all hover:shadow-md">
                   <div className="bg-muted/30 relative aspect-[16/10] overflow-hidden">
                     {example.thumbnail ? (
                       <img
